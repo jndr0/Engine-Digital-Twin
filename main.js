@@ -55,8 +55,8 @@ scene.add(spotLight);
 const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
 scene.add(ambientLight);
 
-const loader = new GLTFLoader().setPath("");
-loader.load("MotorGLTF.gltf", (gltf) => {
+const loader = new GLTFLoader().setPath("models/");
+loader.load("motor/MotorGLTF.gltf", (gltf) => {
   console.log("loading model");
   const mesh = gltf.scene;
 
@@ -81,7 +81,7 @@ loader.load("MotorGLTF.gltf", (gltf) => {
   // Obtener los datos de InfluxDB
   axios({
     method: "post",
-    url: "http://31.222.232.41:8086/api/v2/query?org=a64aef386037d501",
+    url: "https://qartia.com:8086/api/v2/query?org=a64aef386037d501",
     headers: {
       Authorization:
         "Token u4jGFm6Sr0v9cjsX8y_yx6sMNPqv2SWOtz3j32Vvp6yCwpFOEwjGbmKk6880A3v0Y1zbsQ1E5J9SeT5zF96erw==",
@@ -125,7 +125,7 @@ loader.load("MotorGLTF.gltf", (gltf) => {
     heatMapTexture.wrapS = THREE.RepeatWrapping;
     heatMapTexture.wrapT = THREE.RepeatWrapping;
 
-    loader.load("Rodamiento.gltf", (gltf) => {
+    loader.load("rodamiento/Rodamiento.gltf", (gltf) => {
       rodamiento = gltf.scene;
       rodamiento.traverse((child) => {
         if (child.isMesh) {
