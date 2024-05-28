@@ -81,7 +81,7 @@ loader.load("motor/MotorGLTF.gltf", (gltf) => {
   // Obtener los datos de InfluxDB
   axios({
     method: "post",
-    url: "https://qartia.com:8086/api/v2/query?org=a64aef386037d501",
+    url: "http://qartia.com:8086/api/v2/query?org=a64aef386037d501",
     headers: {
       Authorization:
         "Token u4jGFm6Sr0v9cjsX8y_yx6sMNPqv2SWOtz3j32Vvp6yCwpFOEwjGbmKk6880A3v0Y1zbsQ1E5J9SeT5zF96erw==",
