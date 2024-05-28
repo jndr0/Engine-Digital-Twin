@@ -1,0 +1,21 @@
+body {
+  background-color: black;
+  margin: 0;
+}
+#toggle-model {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#toggle-model:hover {
+  background-color: #555;
+}
